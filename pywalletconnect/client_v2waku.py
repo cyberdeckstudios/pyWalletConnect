@@ -318,7 +318,7 @@ class WCv2ClientLegacy(WCClient):
                     "metadata": self.wallet_metadata,
                 },
                 "expiry": now_epoch + 14400,
-                "state": {"accounts": [f"eip155:{chain_id}:{account_address}"]},
+                "state": {"accounts": [f"elrond:{chain_id}:{account_address}"]},
             },
         )
         msgb = self.enc_channel.encrypt_payload(json_encode(respo))
